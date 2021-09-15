@@ -1,15 +1,5 @@
 
-const sr = ScrollReveal({
-  origin :'top',
-  distance : '40px',
-  duration : '800',
-  reset  :'true',
 
-});
-
-sr.reveal('.left-content,.heading,.list,.welcome,.propiter,.quick-link',{
-  interval:200
-});
 
 $(document).ready(function(){
   $(window).scroll(function(){
@@ -93,5 +83,15 @@ $('.menu-btn').click(function(){
  $(".list").click(function(){
      $(this).addClass('active').siblings().removeClass('active');
  });
+const sr = ScrollReveal({
+  origin :'left',
+  distance : '40px',
+  duration : '800',
+  reset  :'true',
 
+});
+
+sr.reveal('.left-content,.heading,.list,.welcome,.propiter,.quick-link',{
+  interval:200
+});
  
