@@ -8,7 +8,7 @@ $(document).ready(function(){
       }else{
         $('.navbar').removeClass("sticky"); 
       }
-      if (this.scrollY > 500){
+      if (this.scrollY > 300){
         $('.scroll-btn').addClass("show");
     }else{
     $('.scroll-btn').removeClass("show");
