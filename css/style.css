@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,400&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow: auto;
+    font-family: 'Crimson Text', serif;
+}
+li{
+   list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/* =============color and fond size root ============== */
+
+:root{
+    --font-75: 75px;
+    --font-40: 40px;
+    --font-38: 38px;
+    --font-36: 36px;
+    --font-33: 33px;
+    --font-30: 30px;
+    --font-28: 28px;
+    --font-26: 26px;
+    --font-23: 23px;
+    --font-20: 20px;
+    --font-18: 18px;
+    --font-16: 16px;
+    --color-red: red;
+    --color-green: green;
+    --color-yellow: #f79021;
+    --color-blue: blue;
+    --color-black: black;
+    --color-white: white;
+    --color-gray: gray;
+    --color-brown: brown;
+    --color-gold: gold;
+}
+h1{
+    font-size: var(--font-40);
+}
+h2{
+    font-size: var(--font-33);
+}
+h3{
+    font-size: var(--font-30);
+}
+h4{
+    font-size: var(--font-28);
+}
+h5{
+    font-size: var(--font-26);
+}
+h6{
+    font-size: var(--font-20);
+}
+p{
+    font-size: var(--font-18);
+}
+.btn{
+    margin-top: 1rem;
+    padding: 8px 13px;
+    color: var(--color-white);
+    background: var(--color-red);
+    font-size: var(--font-16);
+    border-radius: 6px;
+    border: 1px solid var(--color-white);
+    outline: none;
+}
+.btn:hover{
+    background: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.heading{
+    width:100%;
+    height: auto;
+    margin: 30px 0;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.heading h3{
+    position:relative;
+}
+.heading h3::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: var(--color-red);
+    top: 38px;
+    left: calc(50% - 52px);
+}
+.scroll-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--color-red);
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: var(--color-white);
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .scroll-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .menu-btn{
+      font-size: var(--font-26);
+      display: none;
+  }
+  /*======= header menu styling start  ======*/
+   .page-header{
+       width: 100%;
+       height: auto;
+       position: fixed;
+       z-index: 3;
+   }
+   
+   .page-header .navbar{
+    min-height: 130px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    clip-path: polygon(100% 0%, 95% 40%,50% 100%, 5% 40%, 0% 0%);
+    text-align: center;
+    padding: 0 80px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+   }
+   .page-header .navbar.sticky{
+    background: var(--color-red);
+}
+   .page-header .navbar .left-logo{
+    width: 65px;
+    height: 48px;
+    display: none;
+}
+   .page-header .navbar .menu{
+     width:100%;
+     height: 100%;
+     padding-top: 30px;
+     display:flex;
+     justify-content: space-between;
+   }
+   /* .page-header .navbar .menu ul{
+         display:flex;
+        justify-content: space-around;
+       
+    } */
+    .page-header .navbar .menu li a{
+        padding: 8px 12px;
+        color: var(--color-black);
+        font-weight: 700;
+        font-style: italic;
+        font-family: 'Crimson Text', serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+}
+.page-header .navbar .menu li a:hover{
+    color: var(--color-white);
+}
+    .page-header .navbar .logo{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 50px;
+        left: calc(50% - 40px);
+       
+    }
+  /*======= banner section  styling start  ======*/
+  .container{
+      height: 560px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      align-items: center;
+      background:url(../img/banner-4.jpg) no-repeat left;
+      background-size: cover;
+  }
+  .container .left-content{
+      width:100%;
+      height: auto;
+      padding: 40px 25px;
+      margin-left: 40px;
+  }
+  .container .left-content h2{
+      font-size: var(--font-75);
+      color:var(--color-white);
+  }
+  .container .left-content p{
+      color: var(--color-white);
+      padding-right: 40px;
+  }
+  .container .right-slider{
+      width: 100%;
+      height: 400px;
+      margin-top: 60px;
+      padding:20px 0;
+  }
+  .container .right-slider .item{
+      object-fit: cover;
+  }
+
+  /*========= carousel section styling start  ======= */
+
+  .owl-theme .owl-nav {
+    margin-top: 0px;
+}
+  button.owl-prev,
+  button.owl-next{
+      width: 25px;
+      height: 25px;
+      font-size: 25px !important;
+      color: var(--color-white) !important;
+      background:var(--color-red) !important;
+
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    background: var(--color-red);
+    transition: all 0.4s ease;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--color-white);
+    width: 35px;
+}
+
+/* ============gallery sectionm styling============    */
+
+.gallery{
+    height: 100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
+    margin-bottom: 20px;
+}
+.gallery .img-content{
+    width: 100%;
+    height: 450px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.gallery .img-content .image{
+    width:100%;
+    height: 300px;
+    overflow: hidden;
+} 
+.gallery .img-content .image img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor:pointer;
+    transform: scale(1);
+    transition: all 3s ease-in-out;
+}
+.gallery .img-content .image:hover img{
+    transform: scale(1.4);
+}
+
+.gallery .img-content .content{
+    width: 100%;
+    padding: 20px ;
+}
+.gallery .img-content .content .div-1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.gallery .img-content .content .icon-star{
+    color: var(--color-yellow);
+ }
+ .gallery .img-content .prize{
+    font-size: var(--font-23);
+    color: var(--color-brown);
+}
+.gallery .img-content .content a{
+   color:var(--color-black);
+}
+.gallery .img-content .content h4{
+    margin-bottom: 15px;
+}
+.gallery .img-content .content .spn-btn{
+    padding: 5px 10px;
+    background-color: var(--color-gray);
+    color: var(--color-black);
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+.gallery .img-content .content .spn-btn:hover{
+    background:var(--color-yellow);
+    color: var(--color-white);
+}
+/* car-branding styling start  */
+ .car-brand{
+     width: 100%;
+     min-height:500px;
+     background: rgba(0, 0, 0, 0.1);
+     padding: 30px 0; }
+ .car-brand ul{
+     display: flex;
+     margin-bottom: 40px;
+     margin-left: 30px;
+ }
+ .car-brand ul li{
+     padding: 10px 20px;
+     background: var(--color-gray);
+     color: var(--color-white);
+     margin-right: 15px;
+     letter-spacing: 1px;
+     cursor: pointer;
+     text-transform: uppercase;
+     transition: 0.3s ease;
+ }
+ .car-brand ul li.active,
+ .car-brand ul li:hover{
+     background: var(--color-red);
+ }
+ .car-brand .brand{
+     height: 100%;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 10px;
+     margin: 0 10px;
+ }
+ .car-brand .brand .itemBox{
+     position: relative;
+     width: 100%;
+     height: 330px;
+     overflow: hidden;
+ }
+ .car-brand .brand .itemBox h6{
+     padding-top: 10px;
+     padding-bottom: 25px;
+     text-transform: uppercase;
+     border-bottom: 1px solid var(--color-yellow);
+ }
+ .car-brand .brand .itemBox a{
+    color: var(--color-black);
+ }
+.car-brand .brand .itemBox p{
+    padding-top: 10px;
+}
+ .car-brand .brand .itemBox .spn-btn{
+    padding: 5px 10px;
+    background-color: var(--color-gray);
+    color: var(--color-black);
+    margin-right: 10px;
+    transition: 0.3s ease;
+ }
+ .car-brand .brand .itemBox img{
+     height: 230px;
+ }
+ .car-brand .brand .itemBox .view{
+     position: absolute;
+     width: 100%;
+     height: 230px;
+     top: -100%;
+     left: 0;
+     background: rgba(0, 0, 0, 0.6);
+     transition: 0.3s ease;
+ }
+ .car-brand .brand .itemBox:hover .view{
+     top: 0;
+ }
+ .car-brand .brand .itemBox .view a{
+     position: absolute;
+     font-size: var(--font-20);
+     color: var(--color-white);
+     padding: 8px 15px;
+     margin-left: calc(50% - 50px);
+     margin-top:  calc(50% - 50px);
+     text-decoration: none;
+     background: var(--color-green);
+     border-radius: 5px;
+ }
+  /* brand logo section styling */
+
+  .about-us{
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background: url(../img/banner-5.jpg) no-repeat center;
+      background-attachment: fixed;
+      background-size: cover;
+     padding: 50px 100px;
+     column-gap: 50px;
+      
+  }
+  .about-us .welcome,
+  .about-us .propiter{
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.5);
+  }
+  .about-us .welcome h4,
+  .about-us .propiter h4{
+    color: var(--color-white);
+    margin-bottom: 10px;
+  }
+  .about-us .welcome p,
+  .about-us .propiter p{
+      color: var(--color-white);
+      letter-spacing: 1.5px;
+      line-height: 26px;
+  }
+
+  .our-loc{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 50px;
+      background: url(../img/banner-3.jpg) no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+ .our-loc .our-showroom img{
+    object-fit: cover;
+ }
+  /* footer section styling  */
+  .footer{
+      width: 100%; 
+      height: 100%;
+      background:var(--color-gray);
+      padding: 5px 50px;
+  }
+  .footer .quick-link{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+     column-gap: 10px;
+     border-bottom: 2px solid var(--color-white);
+     margin-bottom: 20px;
+     padding-bottom: 20px;
+  }
+  .footer .quick-link .left-sec,
+  .footer .quick-link .middle-sec{
+     text-align: center;
+  }
+
+  .footer .quick-link .left-sec li,
+  .footer .quick-link .middle-sec li{
+      list-style: square;
+      margin-bottom: 12px;
+  }
+  .footer .quick-link li a{
+      color: var(--color-black);
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 0.3s ease;
+  }
+  .footer .quick-link li a:hover{
+      color: var(--color-white);
+  }
+  .footer .quick-link .right-sec form{
+      font-size: var(--font-23);
+  }
+  .footer .quick-link .right-sec input{
+      width: 100%;
+     padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+  }
+  .footer .quick-link .right-sec .message{
+     width: 100%;
+     padding: 10px;
+     border-radius: 5px;
+     min-height: 70px;
+     margin-bottom: 10px;
+  }
+
+  .footer .quick-link .right-sec input[type=submit]{
+      background: var(--color-black);
+      color: var(--color-white);
+      transition: 0.3s ease;
+  }
+  .footer .quick-link .right-sec input[type=submit]:hover{
+      background: var(--color-white);
+      color: var(--color-black);
+  }
+  .footer-leg {
+    text-align: center;
+    margin-bottom: 15px;
+}
+  

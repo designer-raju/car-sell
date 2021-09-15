@@ -1,0 +1,214 @@
+
+:root{
+    --font-75: 75px;
+    --font-40: 40px;
+    --font-38: 38px;
+    --font-36: 36px;
+    --font-33: 33px;
+    --font-30: 30px;
+    --font-28: 28px;
+    --font-26: 26px;
+    --font-23: 23px;
+    --font-20: 20px;
+    --font-18: 18px;
+    --font-16: 16px;
+    --color-red: red;
+    --color-green: green;
+    --color-yellow: #f79021;
+    --color-blue: blue;
+    --color-black: black;
+    --color-white: white;
+    --color-gray: gray;
+    --color-brown: brown;
+    --color-gold: gold;
+}
+@media (max-width: 1024px){
+    .gallery .img-content{
+       height: 370px;
+    }
+    .gallery .img-content .image{
+        height: 230px;
+    }
+    .gallery .img-content .content{
+        padding: 10px;
+    }
+    .gallery .img-content .content .spn-btn{
+        margin-right: 5px;
+        padding: 5px;
+    }
+    .gallery .img-content .content h4{
+        font-size: 23px;
+    }
+  }
+
+
+
+@media (max-width: 768px){
+    h1{
+        font-size: var(--font-40);
+    }
+    h2{
+        font-size: var(--font-33);
+    }
+    h3{
+        font-size: var(--font-23);
+    }
+    h4{
+        font-size: var(--font-23);
+    }
+    h5{
+        font-size: var(--font-20);
+    }
+    h6{
+        font-size: var(--font-18);
+    }
+    p{
+        font-size: var(--font-16);
+    }
+    .page-header {
+        position: fixed;
+    }
+     .page-header .navbar{
+         min-height: 60px;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%, 0% 0%);
+        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px;
+        position: relative;
+        background: var(--color-red);
+    }
+    .page-header .navbar.hit{
+        height: 100vh;
+    }
+    
+    .page-header .navbar .left-logo{
+        display: block;
+    }
+    .page-header .navbar .logo{
+        display: none;
+    }
+    .page-header .navbar .menu{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: var(--color-red);
+        top: 0;
+        left: -100%;
+        padding-top: 100px;
+        transition: 0.7s ease-in-out;
+    }
+    .page-header .navbar .menu.active{
+        left: 0;
+    }
+    .page-header .navbar .menu li{
+        margin-top: 20px;
+    }
+    .menu-btn{
+        display: block;
+        padding: 10px 0;
+        font-size: var(--font-20);
+        cursor: pointer;
+        z-index: 9;
+    }
+    .container{
+        height: 375px;
+    }
+    .container .left-content h2 {
+        font-size: var(--font-40);
+    }
+    .heading{
+        margin: 40px 0;
+    }
+    .heading h3::before{
+        top: 30px;
+    }
+    .gallery .img-content{
+        height: 360px;
+    }
+    .gallery .img-content .image{
+        height: 220px;
+    }
+    .gallery .img-content .content{
+        padding: 10px;
+    }
+    .car-brand ul {
+        margin-bottom: 30px;
+    }
+    .gallery .img-content .content .spn-btn{
+        padding: 5px;
+    }
+    .footer .quick-link .right-sec form {
+        font-size: var(--font-18);
+    } 
+    .footer{
+        padding: 3px 30px;
+    }
+   
+}
+
+
+
+@media (max-width: 600px){
+    
+    .container .left-content{
+        padding: 100px 35px 0 25px;
+        margin: 0;
+    }
+    .gallery .img-content .image{
+        height: 200px;
+    }
+    .container .left-content h2{
+        font-size: var(--font-30);
+    }
+    .container .right-slider{
+        display: none;
+    }
+    .heading h3{
+      font-size: var(--font-20);
+    }
+    .gallery{
+        padding: 0 30px;
+    }
+    .gallery .img-content .content .div-1{
+        margin-bottom: 5px;
+    }
+    .gallery .img-content .content h4{
+        font-size: var(--font-20);
+    }
+    .car-brand{
+        padding: 30px 15px;
+    }
+    .car-brand ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 8px;
+       margin: 10px;
+    }
+    .car-brand ul li{
+        margin: 0;
+        padding: 5px 10px;
+    }
+    .about-us{
+        grid-template-columns: 1fr;
+        padding: 0;
+        row-gap: 10px;
+    }
+    .about-us .welcome p, .about-us .propiter p{
+        line-height: 18px;
+        letter-spacing: 1px;
+    }
+    .footer .quick-link{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 10px;
+    }
+    .right-sec {
+        grid-column: 1 /-1;
+        padding: 0 20px;
+    }
+    .footer-leg {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
