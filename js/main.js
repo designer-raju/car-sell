@@ -7,8 +7,8 @@ const sr = ScrollReveal({
 
 });
 
-sr.reveal('.left-content,.heading,.car-brand,.itemBox,.welcome,.propiter,.quick-link',{
-  interval:500
+sr.reveal('.left-content,.heading,.list,.itemBox,.welcome,.propiter,.quick-link',{
+  interval:200
 });
 
 $(document).ready(function(){
