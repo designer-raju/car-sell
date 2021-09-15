@@ -7,7 +7,7 @@ const sr = ScrollReveal({
 
 });
 
-sr.reveal('.left-content,.heading,.list,.itemBox,.welcome,.propiter,.quick-link',{
+sr.reveal('.left-content,.heading,.list,.welcome,.propiter,.quick-link',{
   interval:200
 });
 
