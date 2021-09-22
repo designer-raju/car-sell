@@ -84,7 +84,7 @@ $('.menu-btn').click(function(){
      $(this).addClass('active').siblings().removeClass('active');
  });
 const sr = ScrollReveal({
-  origin :'left',
+  origin :'top',
   distance : '40px',
   duration : '800',
   reset  :'true',
