@@ -91,7 +91,7 @@ const sr = ScrollReveal({
 
 });
 
-sr.reveal('.left-content,.heading,.list,.welcome,.propiter,.quick-link',{
+sr.reveal('.left-content,.heading,.list,.welcome,.propiter,.left-sec,.middle-sec,.right-sec',{
   interval:200
 });
  
